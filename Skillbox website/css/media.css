@@ -1,0 +1,161 @@
+@media (max-width: 992px) {
+    .hero{
+        padding-top: 130px;
+        padding-bottom: 135px;
+    }
+
+    .hero-title{
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0em;
+    }
+
+    .advantages-back{
+        padding-left: 241px;
+        background-image: url('../img/advantages-md.png');
+    }
+
+    .advantages-wrap{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .advantages-back-1::before,
+    .advantages-back-2::before,
+    .advantages-back-3::before{
+        margin-bottom: 15px;
+    }
+
+    .teacher-lists:not(:nth-child(-n+2)){
+        margin-bottom: 30px;
+    }
+
+    .courses-card-content{
+        min-height: 376px;
+    }
+}
+
+@media (max-width: 767px){
+    .header-logo__mobile{
+        margin-bottom: 30px;
+    }
+
+    .header-navbar{
+        overflow-x: scroll;
+    }
+
+    .header-navbar::-webkit-scrollbar{
+        display: none;
+    }
+
+    /* Новая секция */
+    .hero{
+        padding-top: 77px;
+    }
+
+    .hero-img__mobile{
+        display: none;
+    }
+
+    .advantages-back{
+        background-position: left top;
+        padding-left: 180px;
+        background-image: url('../img/advantages-sm.png');
+    }
+
+    .teacher-card-image{
+        min-width: 180px;
+    }
+
+    .teacher-lists:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    .card-btn{
+        padding: 20px 48px;
+    }
+
+    .courses-card-content{
+        min-height: 480px;
+    }
+}
+
+@media (max-width: 576px){
+    .hero{
+        padding: 50px 0;
+    }
+
+    .hero-title{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .hero-text{
+        margin-bottom: 50px;
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    .hero-btn{
+        padding: 20px 53px;
+        font-size: 16px;
+    }
+
+    .advantages{
+        padding: 50px 0;
+    }
+
+    .advantages-title{
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+
+    .advantages-back{
+        background-image: none;
+        padding-left: 0;
+    }
+
+    .advantages-wrap{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .advantages-back-1::before,
+    .advantages-back-2::before,
+    .advantages-back-3::before{
+        margin-bottom: 0;
+    }
+
+    .advantages-bot .advantages-text{
+        max-width: 100%;
+    }
+
+    .advantages-list:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    .teacher{
+        padding: 50px 0;
+    }
+
+    .teacher-title{
+        size: 20px;
+        line-height: 20px;
+    }
+
+    .teacher-lists:not(:nth-child(-n+2)){
+        margin-bottom: 30px;
+    }
+
+    .courses-wrap::nth-last-of-type(-n + 1){
+        margin-bottom: 30px;
+    }
+
+    .courses-title{
+        size: 20px;
+        line-height: 20px;
+    }
+}
