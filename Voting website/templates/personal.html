@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style/static.css">
+    <link rel="stylesheet" href="../static/style/added.css">
+    <title>Personal</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__list-item">
+                            <a href="/#howTo" class="nav__list-link">как голосовать</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="/" class="nav__list-link ">
+                                <img src="../static/image/Logo.png" alt="logo">
+                            </a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="personal" class="nav__list-link">личный кабинет</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="pers_main">
+        <div class="container">
+            <div class="pers_main__content">
+                <div class="pers_main__data">
+                    <h1 class="pers_main__title">ВАШИ ДАННЫЕ</h1>
+                    <div class="pers_main_dataset">
+                        <span class="pers_main_login">Логин:</span>
+                        <p class="pers_main_logData">{{ user['login'] }}</p>
+                    </div>
+                    <div class="pers_main_dataset">
+                        <span class="pers_main_login">ИИН:</span>
+                        <p class="pers_main_logData">{{ user['iin'] }}</p>
+                    </div>
+                    <div class="pers_main_dataset">
+                        <span class="pers_main_login">Пароль:</span>
+                        <p class="pers_main_logData">{{ user['password'] }}</p>
+                    </div>
+                    <div class="pers_main_dataset">
+                        <span class="pers_main_login">Статус голоса:</span>
+                        <p class="pers_main_logData">{{ user['voice'] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__list">
+                <li>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img src="../static/image/soc_link.png" alt="twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img src="../static/image/soc_link2.png" alt="inst">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img src="../static/image/soc_link3.png" alt="what">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img src="../static/image/soc_link4.png" alt="vk">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

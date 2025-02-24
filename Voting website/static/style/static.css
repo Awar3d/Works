@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'RoundedMplus1c-Bold';
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/RoundedMplus1c-Bold.woff2'),
+        url('../fonts/RoundedMplus1c-Bold.woff');
+}
+
+body{
+    background-color: #276BC7;
+    color: #fff;
+    font-family: 'RoundedMplus1c-Bold', 'sans-serif';
+}
+
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #D9D9D9;
+  }
+  th, td {
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+  }
