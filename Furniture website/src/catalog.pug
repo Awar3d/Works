@@ -1,0 +1,98 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SitDownPls/catalog
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./css/media.css")
+        link(rel="icon" href="../img/Favicon.png" type="image/png")
+        script(defer, src="../dist/scripts/script.js")
+    body 
+        - var upnavs = [{upnav: 'О\u00A0компании'}, {upnav: 'Гарантия и\u00A0возврат'}, {upnav: 'Корпоративным клиентам'}, {upnav: 'Дизайн-решение'}]
+        - var navs = [{nav: 'Каталог'}, {nav: 'Магазины'}, {nav: 'Шоу-рум'}, {nav: 'Доставка и\u00A0оплата'}, {nav: 'Дисконт'}, {nav: 'Контакты'}]
+        - var cards = [{star: "5,0", subtitle: "Диван кожаный \u00ABR-94\u00BB", index : "1", price: "94\u00A0990 руб"}, {index : "2", star: "4,9", subtitle: "Диван апартековый \u00ABT-75\u00BB", price: "69\u00A0990 руб"}, {index : "3", star: "4,8", subtitle: "Диван тканевый \u00ABD-31\u00AB", price: "28\u00A0490 руб"}, {index : "4", star: "4,8", subtitle: "Диван велюровый \u00ABY-68\u00BB", price: "22\u00A0990 руб"}, {index : "5", star: "4,8", subtitle: "Диван из шинила \u00ABW-95\u00BB", price: "22\u00A0990 руб"}, {index : "6", star: "4,8", subtitle: "Диван флоковый \u00ABG-41\u00BB", price: "17\u00A0990 руб"}, {index : "7", star: "4,8", subtitle: "Диван шиниловый \u00ABV-43\u00BB", price: "19\u00A0990 руб"}, {index : "8", star: "4,7", subtitle: "Диван велюровый \u00ABS-99\u00BB", price: "19\u00A0990 руб"}, {index : "9", star: "4,7", subtitle: "Диван из кожзама \u00ABF-85\u00BB", price: "26\u00A0990 руб"}]
+        header.header.header-catalog
+            .container 
+                include __header.pug
+        main.catalog-main
+            .container 
+                section.bread
+                    h1(style="display: none;") Каталог диванов
+                    ol.bread__crumbs-list.list-reset
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="index.html") Главная 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="#") Каталог 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="#") Диваны 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="#") Прямые диваны 
+                section.content.catalog-offset 
+                    .content__filter 
+                        .content__filter-inside 
+                            h2.content__filter-title Фильтровать&nbsp;по:
+                            .content__filter-color 
+                                h3.content__filter-subtitle Цвет
+                                ul.content__list.list-reset
+                                    li.content__list-item
+                                        input.content__list-checkbox(type="checkbox")
+                                        span.content__list-span Коричневый
+                                    li.content__list-item
+                                        input.content__list-checkbox(type="checkbox")
+                                        span.content__list-span Черный
+                                    li.content__list-item
+                                        input.content__list-checkbox(type="checkbox")
+                                        span.content__list-span Синий
+                                    li.content__list-item
+                                        input.content__list-checkbox(type="checkbox")
+                                        span.content__list-span Белый
+                            .content__filter-category 
+                                h3.content__filter-subtitle Категория
+                                ul.content__list.list-reset
+                                    li.content__list-item
+                                        input.content__list-checkbox(type="checkbox")
+                                        span.content__list-span Диваны
+                                    li.content__list-item
+                                        input.content__list-checkbox(type="checkbox")
+                                        span.content__list-span Кресла
+                            .content__filter-price 
+                                h3.content__filter-subtitle Цена
+                                .content__filter-wrap
+                                    span.content__filter-span от
+                                    input.content__filter-input(type="text", placeholder="2000")
+                                    span.content__filter-span до
+                                    input.content__filter-input(type="text", placeholder="150\u00A0000")
+                        .content__card 
+                            .content__card-inside
+                                .content__card-title 
+                                    h2.content__card-up Оксфорд 1950 
+                                    h3.content__card-down Новая коллекция изысканных кресел
+                                a.content__card-link(href="#") 
+                                    span.content__card-span В&nbsp;каталог
+                                    svg.content__card-svg
+                                        use(xlink:href="../img/svg/arrow-less.svg#less")
+                    .content__catalog
+                        h2.content__catalog-title Каталог
+                        ul.content__catalog-list.list-reset
+                            each card in cards
+                                li.content__catalog-item(class=card.class)
+                                    .content__catalog-star
+                                        svg.content__catalog-svg
+                                            use(xlink:href="../img/sprite.svg#star")
+                                        span.content__catalog-span=card.star
+                                    picture 
+                                        source.high__sofa-img(srcset=`../img/high-${card.index}-320.png`, media="(max-width: 650px)")
+                                        img.content__catalog-img(src=`../img/high-${card.index}-full.png`, alt="фото дивана")
+                                    h2.content__catalog-subtitle.subtitle=card.subtitle
+                                    span.content__catalog-price=card.price
+                                    form(action="product.html")
+                                        button.btn-reset.secondary-btn Купить 
+                section.page
+                    h2.page__title Хлебные крошки  
+                    a.page__list(href="#") 1
+                    a.page__list(href="#") 2
+                    a.page__list(href="#") 3
+        footer.footer
+            .container 
+                include __footer.pug

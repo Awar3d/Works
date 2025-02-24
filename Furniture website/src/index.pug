@@ -1,0 +1,244 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SitDownPls
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./css/media.css")
+        link(rel="icon" href="../img/Favicon.png" type="image/png")
+        script(defer, src="./scripts/script.js")
+    body 
+        - var upnavs = [{upnav: 'О\u00A0компании'}, {upnav: 'Гарантия и\u00A0возврат'}, {upnav: 'Корпоративным клиентам'}, {upnav: 'Дизайн-решение'}]
+        - var navs = [{nav: 'Каталог'}, {nav: 'Магазины'}, {nav: 'Шоу-рум'}, {nav: 'Доставка и\u00A0оплата'}, {nav: 'Дисконт'}, {nav: 'Контакты'}]
+        - var cards = [{star: "5,0", subtitle: "Диван кожаный \u00ABR-94\u00BB", index : "1", price: "94\u00A0990 руб"}, {index : "2", star: "4,9", subtitle: "Диван апартековый \u00ABT-75\u00BB", price: "69\u00A0990 руб"}, {index : "3", star: "4,8", subtitle: "Диван тканевый \u00ABD-31\u00AB", price: "28\u00A0490 руб"}, {index : "4", star: "4,8", subtitle: "Диван велюровый \u00ABY-68\u00BB", price: "22\u00A0990 руб"}, {index : "5", star: "4,8", subtitle: "Диван из шинила \u00ABW-95\u00BB", price: "22\u00A0990 руб"}, {index : "6", star: "4,8", subtitle: "Диван флоковый \u00ABG-41\u00BB", price: "руб 17\u00A0990 руб"}, {index : "7", star: "4,8", subtitle: "Диван шиниловый \u00ABV-43\u00BB", price: "19\u00A0990 руб"}, {index : "8", star: "4,7", subtitle: "Диван велюровый \u00ABS-99\u00BB", price: "19\u00A0990 руб"}]
+        header.header
+            .container 
+                include __header.pug
+        main
+            section.hero
+                .container 
+                    .hero__content 
+                        h1(style="display: none;") Главный сайт по продаже мебели: диваны, стулья, комоды и тд
+                        h2#hero-title.hero__title Скидка&nbsp;15% на&nbsp;первую покупку
+                        button.hero__btn.primary-btn.btn-reset Получить!
+            section.special
+                .container 
+                    h2.section-title.special__title Специальные предложения
+                    ul.special__list.list-reset 
+                        li.special__item.special__item-first
+                            span.special__price &mdash;&nbsp;9&nbsp;000
+                            picture.special__img-pict
+                                source(srcset="../img/special-1-320.png", media="(max-width: 650px)")
+                                source(srcset="../img/special-1-1024.png", media="(max-width: 1081px)")
+                                img.special__img-first(src='../img/special-1-full.png', alt="фото дивана")
+                            h3.special__subtitle.subtitle Кресло велюровое &laquo;X-24&raquo;
+                            .special__price-wrap 
+                                span.special__new 15&nbsp;990 руб
+                                span.special__old 24&nbsp;990 руб
+                            form.special__price-form(action="product.html")
+                                a.btn-reset.secondary-btn Купить
+                        li.special__item.special__item-second
+                            span.special__price &mdash;&nbsp;10&nbsp;000
+                            picture.special__img-pict
+                                source(srcset="../img/special-2-1024.png", media="(max-width: 1081px)")
+                                img.special__img-second(src='../img/special-2-full.png', alt="фото дивана")
+                            h3.special__subtitle.subtitle Диван тканевый &laquo;Z-44&raquo;
+                            .special__price-wrap 
+                                span.special__new 22&nbsp;990 руб
+                                span.special__old 32&nbsp;990 руб
+                            form.special__price-form(action="product.html")
+                                a.btn-reset.secondary-btn Купить
+                            span.special__instruction-img 
+                        li.special__item.special__item-third
+                            span.special__price &mdash;&nbsp;600
+                            picture.special__img-pict
+                                img.special__img-third(src='../img/special-3-full.png', alt="фото дивана")
+                            h3.special__subtitle.subtitle Будильник &laquo;Quartz-23&raquo;
+                            .special__price-wrap 
+                                span.special__new 1&nbsp;290 руб
+                                span.special__old 1&nbsp;890 руб
+                            form.special__price-form(action="product.html")
+                                a.btn-reset.secondary-btn Купить 
+                        li.special__item.special__item-fourth
+                            span.special__price &mdash;&nbsp;600
+                            picture.special__img-pict
+                                img.special__img-third(src='../img/special-4-320.png', alt="фото дивана")
+                            h3.special__subtitle.subtitle Мини-скульптура &laquo;Oh my deer&raquo;
+                            .special__price-wrap 
+                                span.special__new &nbsp;690 руб
+                                span.special__old &nbsp;990 руб
+                            form.special__price-form(action="product.html")
+                                a.btn-reset.secondary-btn Купить 
+                        li.special__item.special__item-fifth
+                            span.special__price &mdash;&nbsp;600
+                            picture.special__img-pict
+                                img.special__img-third(src='../img/special-5-320.png', alt="фото дивана")
+                            h3.special__subtitle.subtitle Диван вел-флок &laquo;Z-85&raquo;
+                            .special__price-wrap 
+                                span.special__new 22&nbsp;990 руб
+                                span.special__old 32&nbsp;990 руб
+                            form.special__price-form(action="product.html")
+                               a.btn-reset.secondary-btn Купить 
+                        li.special__item.special__item-sixth
+                            span.special__price &mdash;&nbsp;600
+                            picture.special__img-pict
+                                img.special__img-third(src='../img/special-6-320.png', alt="фото дивана")
+                            h3.special__subtitle.subtitle Термометр + гидрометр &laquo;H-18&raquo;
+                            .special__price-wrap 
+                                span.special__new 1&nbsp;390 руб
+                                span.special__old 2&nbsp;990 руб
+                            form.special__price-form(action="product.html")
+                                a.btn-reset.secondary-btn Купить 
+            section.high 
+                .container
+                    h2.section-title Высокий рейтинг
+                    ul.high__list.list-reset
+                        each card in cards
+                            li.sofa-item
+                                .high__star 
+                                    svg.high__svg
+                                        use(xlink:href="./img/sprite.svg#star")
+                                    span.high__span=card.star
+                                picture
+                                    source.high__sofa-img(srcset=`../img/high-${card.index}-1024.png`, media="(max-width: 1024px)")
+                                    img.high__sofa-img(src=`../img/high-${card.index}-full.png`, alt="фото дивана")
+                                h3.high__subtitle.subtitle=card.subtitle
+                                span.high__price=card.price
+                                a.btn-reset.secondary-btn(src='product.html') Купить
+            section.banner
+                .container 
+                    .banner__content 
+                        .banner__title 
+                            h2.banner__title-up Оксфорд 1950
+                                span.banner__title-down Новая коллекция изысканных кресел
+                        a.banner__btn.primary-btn.btn-reset Ознакомиться
+            section.top
+                .container 
+                    h2.top__subtitle.section-title Топ категории
+                    ul.top__list.list-reset 
+                        li.top__item.top__first 
+                            .top__link-wrap 
+                                a.top__link-adject(href="#")
+                                    span Прямые 
+                                a.top__link-adject(href="#")
+                                    span Угловые 
+                                a.top__link-adject(href="#")
+                                    span Модульные 
+                            h3.top__subtitle.subtitle 
+                                | Диваны
+                                span.top__subtitle-svg.top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                            a.top__link(href="#") 
+                                span.top__link-descr В&nbsp;каталог
+                                .top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                        li.top__item.top__second 
+                            .top__link-wrap 
+                                a.top__link-adject(href="#")
+                                    span Мягкие
+                                a.top__link-adject(href="#")
+                                    span Кресла-кровати
+                            h3.top__subtitle.subtitle 
+                                | Кресла
+                                span.top__subtitle-svg.top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                            a.top__link(href="#") 
+                                span.top__link-descr В&nbsp;каталог
+                                span.top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                        li.top__item.top__third 
+                            .top__link-wrap 
+                                a.top__link-adject(href="#")
+                                    span Односпальные
+                                a.top__link-adject(href="#")
+                                    span Двуспальные
+                            h3.top__subtitle.subtitle 
+                                | Кровати
+                                span.top__subtitle-svg.top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                            a.top__link(href="#") 
+                                span.top__link-descr В&nbsp;каталог
+                                .top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                        li.top__item.top__fourth 
+                            .top__link-wrap 
+                                a.top__link-adject(href="#")
+                                    span Тумбы
+                                a.top__link-adject(href="#")
+                                    span Комоды
+                            h3.top__subtitle.subtitle 
+                                | Тумбы и комоды
+                                span.top__subtitle-svg.top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                            a.top__link(href="#") 
+                                span.top__link-descr В&nbsp;каталог
+                                .top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                        li.top__item.top__fifth 
+                            .top__link-wrap 
+                                a.top__link-adject(href="#")
+                                    span Деревянные
+                                a.top__link-adject(href="#")
+                                    span Металлокаркас 
+                            h3.top__subtitle.subtitle 
+                                | Стулья
+                                span.top__subtitle-svg.top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+                            a.top__link(href="#") 
+                                span.top__link-descr В&nbsp;каталог
+                                .top__link-svg 
+                                    svg.top__svg
+                                        use(xlink:href="./img/sprite.svg#arrow-less")
+            section.useful
+                .container 
+                    h3.section-title Полезное
+                    ul.useful__list.list-reset 
+                        li.useful__item.useful__first
+                            .useful__item-content
+                                p.useful__text И&nbsp;нет сомнений, что сделанные на&nbsp;базе интернет-аналитики выводы представляют собой не&nbsp;что иное?
+                                a.secondary-btn.btn-reset Читать
+                        li.useful__item.useful__second
+                            .useful__item-content
+                                p.useful__text Как принято считать, некоторые особенности приносят несомненную пользу обществу?
+                                a.secondary-btn.btn-reset Читать
+                        li.useful__item.useful__third
+                            .useful__item-content
+                                p.useful__text Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?
+                                a.secondary-btn.btn-reset Читать
+                        li.useful__item.useful__fourth
+                            .useful__item-content
+                                p.useful__text Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?
+                                a.secondary-btn.btn-reset Читать
+                        li.useful__item.useful__fifth
+                            .useful__item-content
+                                p.useful__text Как принято считать, некоторые особенности приносят несомненную пользу обществу?
+                                a.secondary-btn.btn-reset Читать
+            section.welcome 
+                .container 
+                    .welcome__wrap
+                        h3.section-title.welcome__title Мы&nbsp;всегда вам рады!
+                        .welcome__content 
+                            p.welcome__text Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
+                            form.welcome__form(action="#")
+                                input.welcome__input(type="text", placeholder="Как вас зовут?") 
+                                input.welcome__input(type="tel", placeholder="Ваш телефон") 
+                                input.welcome__input(type="email", placeholder="Ваш e-mail")    
+                                button.welcome__btn.primary-btn.btn-reset(type="submit") Отправить
+                                .welcome__checkbox-wrap
+                                    input.welcome__checkbox(type="checkbox")
+                                    p.welcome__agreement
+                                        | Принимаю 
+                                        a.welcome__agreement-link(href="#") пользовательское соглашение
+        footer.footer
+            .container 
+                include __footer.pug

@@ -1,0 +1,74 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title product
+        link(rel="stylesheet", href="../css/style.css")
+        link(rel="stylesheet", href="../css/media.css")
+        link(rel="icon" href="../img/Favicon.png" type="image/png")
+        script(defer, src="../dist/scripts/script.js")
+    body 
+        - var upnavs = [{upnav: 'О\u00A0компании'}, {upnav: 'Гарантия и\u00A0возврат'}, {upnav: 'Корпоративным клиентам'}, {upnav: 'Дизайн-решение'}]
+        - var navs = [{nav: 'Каталог'}, {nav: 'Магазины'}, {nav: 'Шоу-рум'}, {nav: 'Доставка и\u00A0оплата'}, {nav: 'Дисконт'}, {nav: 'Контакты'}]
+        - var cards = [{class: "sofa-item-first" ,star: "4,5", subtitle: "Диван велюровый \u00ABR-85\u00BB", price: "34\u00A0990 руб", index: '1'}, {class: "sofa-item-second" ,star: "4,6", subtitle: "Диван флоковый \u00ABH-58\u00BB", price: "23\u00A0990 руб", index: '2'}, {class: "sofa-item-third" ,star: "4,5", subtitle: "Диван велюровый \u00ABS-44\u00BB", price: "19\u00A0990 руб", index: '3'}, {class: "sofa-item-fourth" ,star: "4,8", subtitle: "Диван шиниловый \u00ABV-43\u00BB", price: "19\u00A0990 руб", index: '4'}]
+        - var instrParams = [{parName: "Гарантия", par: "18\u00A0месяцев"},{parName: "Артикул", par: "AAA41269004"},{parName: "Длина", par: "163\u00A0см"},{parName: "Высота", par: "90\u00A0см"},{parName: "Глубина", par: "108\u00A0см"},{parName: "Спальное\u00A0место", par: "200\u00A0см\u00A0х\u00A0125\u00A0см"},{parName: "Высота\u00A0посадки", par: "45\u00A0см"},{parName: "Механизм", par: "Опорный"},{parName: "Тип\u00A0обивки", par: "Рогожка"},{parName: "Цвет", par: "Синий"},{parName: "Наполнитель", par: "Независимый\u00A0пружинный\u00A0блок"},{parName: "Материал\u00A0каркаса", par: "Металл.\u00A0рама\u00A0с\u00A0дерев.\u00A0латами"},{parName: "Количество\u00A0мест", par: "Двухместные"},{parName: "Категория", par: "Прямые\u00A0тканевые\u00A0диваны"},{parName: "Возврат", par: "Условия"}]
+        header.header.header-product
+            .container 
+                include __header.pug
+        main
+            .container 
+                section.bread
+                    h1(style="display: none;") Страница товара
+                    ol.bread__crumbs-list.list-reset
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="index.html") Главная 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="#") Каталог 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="#") Диваны 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="#") Прямые диваны 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="#") D-31
+                section.product
+                    .product__main-info 
+                        .product__main-content 
+                            .product__main-rate
+                                svg.product__rate-svg
+                                    use(xlink:href="../img/sprite.svg#star")
+                                span.product__rate-span 4,8
+                            h2.product__subtitle Диван тканевый прямой &laquo;D-31&raquo;
+                            span.product__descr Мини 120&nbsp;см без ящика Stark синий (Рогожка)
+                            h2.product__title 28&nbsp;490 руб
+                            button.product__btn.primary-btn.btn-reset Купить в&nbsp;один клик
+                            button.product__link + Добавить в&nbsp;корзину
+                    .product__instruction.instruction 
+                        .instruction__descr 
+                            h2.instruction__subtitle Опорный механизм
+                            p.instruction__page Опорный механизм напоминает пантограф, к&nbsp;которому добавили дополнительную секцию. У&nbsp;опорного дивана сиденье &laquo;выпрыгивает&raquo; вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих&nbsp;&mdash; опустить спинку.<br> Этот механизм не&nbsp;портит пол и&nbsp;не&nbsp;боится ковров. Требуется чуть больше силы, чтобы разложить диван, но&nbsp;подросток справится.       
+                        .instruction__params
+                            each parametr in instrParams
+                                .instruction__param 
+                                        span.instruction__param-name=parametr.parName
+                                        span.instruction__param-dots
+                                        span.instruction__param-value=parametr.par
+                section.same-product
+                    h2.subtitle.same-product__subtitle Похожие товары
+                    ul.same-product__list.list-reset
+                            each card in cards
+                                li.same-product__item(class=card.class)
+                                    .same-product__star 
+                                        svg.same-product__svg
+                                            use(xlink:href="../img/sprite.svg#star")
+                                        span.same-product__span=card.star
+                                    picture 
+                                        source.high__sofa-img(srcset=`../img/high-${card.index}-320.png`, media="(max-width: 650px)")
+                                        img.same-product__img(src=`../img/high-${card.index}-full.png`, alt="фото дивана")
+                                    h2.same-product__subtitle.subtitle=card.subtitle
+                                    span.same-product__price=card.price
+                                    form(action="product.html")
+                                        button.btn-reset.secondary-btn Купить 
+        footer.footer 
+            .container 
+                include __footer.pug

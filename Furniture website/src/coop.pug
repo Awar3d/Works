@@ -1,0 +1,76 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SitDownPls
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./css/media.css")
+        link(rel="icon" href="../img/Favicon.png" type="image/png")
+        script(defer, src="./scripts/script.js")
+    body 
+        - var upnavs = [{upnav: 'О\u00A0компании'}, {upnav: 'Гарантия и\u00A0возврат'}, {upnav: 'Корпоративным клиентам'}, {upnav: 'Дизайн-решение'}]
+        - var navs = [{nav: 'Каталог'}, {nav: 'Магазины'}, {nav: 'Шоу-рум'}, {nav: 'Доставка и\u00A0оплата'}, {nav: 'Дисконт'}, {nav: 'Контакты'}]
+        - var cards = [{star: "5,0", subtitle: "Диван кожаный \u00ABR-94\u00BB", index : "1", price: "94\u00A0990 руб"}, {index : "2", star: "4,9", subtitle: "Диван апартековый \u00ABT-75\u00BB", price: "69\u00A0990 руб"}, {index : "3", star: "4,8", subtitle: "Диван тканевый \u00ABD-31\u00AB", price: "28\u00A0490 руб"}, {index : "4", star: "4,8", subtitle: "Диван велюровый \u00ABY-68\u00BB", price: "22\u00A0990 руб"}, {index : "5", star: "4,8", subtitle: "Диван из шинила \u00ABW-95\u00BB", price: "22\u00A0990 руб"}, {index : "6", star: "4,8", subtitle: "Диван флоковый \u00ABG-41\u00BB", price: "руб 17\u00A0990 руб"}, {index : "7", star: "4,8", subtitle: "Диван шиниловый \u00ABV-43\u00BB", price: "19\u00A0990 руб"}, {index : "8", star: "4,7", subtitle: "Диван велюровый \u00ABS-99\u00BB", price: "19\u00A0990 руб"}]
+        header.header
+            .container 
+                include __header.pug
+        main
+            .container 
+                section.bread
+                    h1(style="display: none;") Страница сотрудничества
+                    ol.bread__crumbs-list.list-reset
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="index.html") Главная 
+                        li.bread__crumbs-item  
+                            a.bread__crumbs-link(href="coop.html") Сотрудничество
+                section.coop 
+                    h2.coop__title Сотрудничество
+                    .coop__toSuppliers.suppliers
+                        h3.coop__subtitle Поставщикам
+                        p.coop__text При планировании обстановки торгового помещения важно обустроить его с&nbsp;комфортом для покупателей: грамотно зонировать, обеспечить эффективную демонстрацию и&nbsp;хранение товаров в&nbsp;зале. Если вам необходимо комплексное оснащение, организация зоны отдыха или отдельные предметы меблировки для поддержания эффективной торговой деятельности, мы&nbsp;поможем выбрать продукцию с&nbsp;учетом нагрузки от&nbsp;поступающего трафика.
+                    .coop__get.get 
+                        h3.coop__subtitle Что вы получаете?
+                        ul.get__list.list-reset
+                            li.get__item 
+                                svg.get__item-svg(tabindex="0")
+                                    use(xlink:href="../img/sprite.svg#connect")
+                                span.coop__text Мы&nbsp;ценим идеи и&nbsp;вдохновение и&nbsp;предлагаем сотрудничество талантливым дизайнерам и&nbsp;архитекторам. Выпускаемая нами продукция гармонично дополнит любой современный проект. 
+                            li.get__item
+                                svg.get__item-svg(tabindex="0")
+                                    use(xlink:href="../img/sprite.svg#pack")
+                                span.coop__text  Комплексное решение для красивого и&nbsp;функционального обустройства любых пространств.
+                            li.get__item 
+                                svg.get__item-svg(tabindex="0")
+                                    use(xlink:href="../img/sprite.svg#subConnect")
+                                span.coop__text В&nbsp;ассортименте представлены все товарные группы для того, чтобы воссоздать обстановку в&nbsp;помещениях разных типов: кабинетах, смешанных пространствах, Open Space, гостевых и&nbsp;переговорных комнатах.
+                    .coop__adv.adv 
+                        h3.coop__subtitle Ваши преимущества от сотрудничества
+                        ul.adv__list.list-reset 
+                            li.adv__item
+                                span.coop__orange Возможность 1:
+                                p.coop__text Создавайте незабываемые впечатления. Красиво меблированная фотостудия не&nbsp;оставит клиентов равнодушными, а&nbsp;созданная интерьером атмосфера будет надолго запечатлена на&nbsp;их&nbsp;снимках. Стильная и&nbsp;разноплановая обстановка творческого пространства&nbsp;&mdash; ключевая составляющая его успешной деятельности. Позаботьтесь о&nbsp;людях в&nbsp;кадре, а&nbsp;мы&nbsp;поможем правильно выбрать мебель.
+                            li.adv__item
+                                span.coop__orange Возможность 2:
+                                p.coop__text Мы&nbsp;предлагаем застройщикам, работающим на&nbsp;территории&nbsp;РФ, участие наших специалистов от&nbsp;этапа проектирования обстановки квартир и&nbsp;подбора комплексных интерьерных решений до&nbsp;оптовых поставок мебели. Поможем организовать демонстрационный зал с&nbsp;образцами изделий и&nbsp;материалов на&nbsp;площади нового здания, чтобы покупатель заблаговременно подобрал тот вариант меблировки, который удовлетворит даже самые взыскательные ожидания.
+                    .coop__garanties.garanties
+                        h3.coop__subtitle Гарантии
+                        ul.garanties__list.list-reset
+                            li.garanties__item 
+                                span.coop__orange 1
+                                p.coop__text При приемке товара Покупатель должен внимательно проверить его количество, качество и&nbsp;ассортимент на&nbsp;соответствие сопроводительным документам и&nbsp;заказу. После подписания товарного чека Покупатель утрачивает право предъявления претензий, которые можно выявить при приемке товара.
+                            li.garanties__item 
+                                span.coop__orange 2
+                                p.coop__text На&nbsp;товары, сборка которых производилась покупателем самостоятельно (не&nbsp;специалистами Продавца), гарантийные обязательства Продавца не&nbsp;распространяются. Также гарантия не&nbsp;распространяется на&nbsp;повреждения товара, полученные в&nbsp;ходе самостоятельной доставки и&nbsp;подъема товара. Покупатель не&nbsp;вправе отказаться от&nbsp;товара надлежащего качества, имеющего индивидуально-определенные свойства, т.е. если товар может быть использован исключительно приобретающим его потребителем.
+                            li.garanties__item 
+                                span.coop__orange 3
+                                p.coop__text Возврат или обмен товара возможен при условии, что сохранена упаковка, товарный вид и&nbsp;потребительские свойства товара, а&nbsp;также товарный и&nbsp;кассовый чеки. В&nbsp;этом случае мы&nbsp;гарантируем вам возврат полной стоимости товара (за&nbsp;вычетом стоимости доставки). В&nbsp;случае отказа от&nbsp;товара при доставке, клиент оплачивает услуги доставки.
+                    .coop__term 
+                        picture 
+                            source.high__sofa-img(srcset="../img/term-320.png", media="(max-width: 650px)")
+                            img(src="../img/term-full.png", alt="рисунок карандаша")
+                        h3.term__title Срок гарантии на&nbsp;нашу мебель составляет от&nbsp;18&nbsp;до&nbsp;60&nbsp;месяцев
+
+        footer.footer
+            .container 
+                include __footer.pug
