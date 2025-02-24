@@ -1,0 +1,376 @@
+@media (max-width: 1600px){
+    .header-ul{
+        gap: 70px;
+    }
+}
+
+@media (max-width: 1378px) {
+    .container{
+        padding: 0 50px;
+    }
+
+    .gallery-content{
+        flex-direction: column;
+    }
+
+    .gallery-title{
+        margin-bottom: 16px;
+    }
+
+    .gallery-labels{
+        margin-bottom: 30px;
+    }
+    
+    .catalog-card{
+        padding: 0;
+    }
+
+    .card-signa{
+        margin-bottom: 16px;
+    }
+
+    .catalog-card{
+        flex-direction: column;
+    }
+
+    .catalog-portrait{
+        margin-bottom: 30px;
+    }
+
+    .catal-card-wrap{
+        padding: 0;
+    }
+
+    .event-card-group{
+        gap: 27px;
+    }
+
+    .event-card{
+        height: 683px;
+    }
+    
+    .event-card-content{
+        padding: 50px 34px;
+    }
+    
+    .event-card-sig{
+        right: 34px;
+        text-align: right;
+    }
+
+    .contacts-content{
+        gap: 30px;
+    }
+
+    .contacts-subtitle{
+        margin-bottom: 10px;
+    }
+
+    .header-menu{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+@media (max-width: 1158px) {
+    .header-menu{
+        flex-wrap: wrap;
+        padding-bottom: 24px;
+        justify-content: space-between;
+        row-gap: 31px;
+    }
+
+    .header-nav{
+        order: 3;
+        width: 100%;
+    }
+
+    .header-logo-link{
+        padding-bottom: 31px;
+    }
+
+    .header-btn{
+        margin-bottom: 31px;
+    }
+
+    .header-btnSvg{
+        margin-bottom: 31px;
+    }
+
+    .hero-content{
+        padding: 101px 265px 101px 0;
+    }
+
+    .hero-text{
+        margin-bottom: 133px;
+    }
+
+    .aboutUs-content{
+        padding: 80px 0;
+    }
+
+    .contacts-reg{
+        flex-wrap: wrap;
+    }
+
+    .contact-input{
+        min-width: 323px;
+    }
+
+    .footer-link{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 956px) {
+    .header-nav{
+        overflow-x: scroll;
+    }
+
+    .header-nav::-webkit-scrollbar{
+        display: none;
+    }
+
+    .hero-content{
+        padding: 87px 89px 87px 0;
+    }
+
+    .event-card-img img{
+        width: 100%;
+        object-fit: cover;
+        height: 200px;
+    }
+
+    .cat-card-1{
+        background-image: url('../img/catalog-sm-1.png');
+    }
+    
+    .cat-card-2{
+        background-image: url('../img/catalog-sm-2.png');
+    }
+    
+    .cat-card-3{
+        background-image: url('../img/catalog-sm-3.png');
+    }
+
+    .event-card-group{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-card{
+        height: 528px;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .container{
+        padding: 0 15px;
+    }
+
+    .section-offset{
+        margin-bottom: 50px;
+    }
+
+    .header-menu{
+        padding-top: 16px;
+        padding-bottom: 12px;
+    }
+
+    .header-logo-link{
+        margin-bottom: 12px;
+        padding: 0;
+    }
+
+    .header-btnSvg{
+        margin-bottom: 14px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .header-ul{
+        gap: 44px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .header-btn{
+        margin-bottom: 14px;
+    }
+
+    .hero-content{
+        padding: 50px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title{
+        font-size: 32px;
+        line-height: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .hero-text{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .hero-btn{
+        font-size: 12px;
+        line-height: 16px;
+        padding: 12px 17px;
+    }
+
+    .aboutUs-content{
+        padding: 50px 0;
+    }
+
+    .aboutUs-title{
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 38px;
+    }
+
+    .aboutUs-text{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .right-wrap{
+        align-items: baseline;
+        flex-direction: column;
+    }
+
+    .catalog-card{
+        gap: 30px;
+    }
+
+    .catalog-portrait{
+        margin-bottom: 20px;
+    }
+
+    .catalog-title{
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 38px;
+        margin-bottom: 12px;
+    }
+
+    .card-title{
+        margin-bottom: 14px;
+    }
+
+    .card-signa{
+        margin-bottom: 14px;
+    }
+
+    .projects-title{
+        margin-bottom: 12px;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 38px;
+    }
+
+    .projects-text{
+        margin-bottom: 20px;
+    }
+
+    .projects-partners{
+        margin-bottom: 11px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    .partners-logo-wrap{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .partners-logo{
+        padding: 30px 65px;
+    }
+
+    .contacts-line{
+        border: none;
+    }
+
+    .contacts-content{
+        gap: 20px;
+    }
+
+
+
+    .event-card{
+        height: 683px;
+    }
+
+    .event-card-content{
+        padding: 59px 23px 49px 23px;
+    }
+
+    .contacts-subtitle{
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25px;
+        margin-bottom: 4px;
+    }
+
+    .contact-adress{
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+
+    .contacts-reg{
+        gap: 20px;
+    }
+
+    .contact-input{
+        min-width: 290px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .contact-button{
+        min-width: 128px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    .contacts-link-wrap{
+        gap: 7px;
+    }
+
+    .contacts-hidden-text{
+        display: none;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-logo-link{
+        order: 2;
+    }
+
+    .footer-link{
+        width: 50px;
+        height: 50px;
+    }
+}
+
