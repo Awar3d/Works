@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-deepWater: #003b46;
+    --color-ocean: #07575b;
+    --color-wave: #66a5ad;
+    --color-seaFoam: #c4dfe6;
+    /* темные */
+    --color-redWood: #42313A;
+    --color-chestNut: #6c2d2c;
+    --color-leather: #9f4636;
+    --color-pergament: #f1dcc9
+}
