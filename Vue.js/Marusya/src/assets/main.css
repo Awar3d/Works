@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Play';
+  src: url('../assets/fonts/Play-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Play-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Play';
+  src: url('../assets/fonts/Play-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Play-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: 'Play',sans-serif;
+  background-color: #081A2D;
+  color: #FFFFFF;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a, button{
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button{
+  border: none;
+  background: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  padding: 0 80px;
+}
+
+.nav__list-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 720px) {
+  .container{
+    padding: 0 20px;
+  }
+}
