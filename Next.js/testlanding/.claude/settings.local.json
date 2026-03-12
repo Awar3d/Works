@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd C:/Users/alimd/Works/Next.js/testlanding && rm -rf .next)"
+    ]
+  }
+}
