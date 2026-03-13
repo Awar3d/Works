@@ -1,3 +1,114 @@
+export const VaultIcon = ({ className }: { className?: string }) => (
+    <svg
+        viewBox="0 0 320 300"
+        className={className}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <circle cx="160" cy="148" r="108" stroke="url(#ringGrad)" strokeWidth="1.5" strokeDasharray="6 4" opacity="0.5" />
+        <circle cx="160" cy="148" r="90" stroke="url(#ringGrad2)" strokeWidth="1" opacity="0.3" />
+
+        <rect x="88" y="76" width="144" height="144" rx="20" fill="url(#vaultBody)" />
+        <rect x="88" y="76" width="144" height="144" rx="20" stroke="url(#vaultBorder)" strokeWidth="1.5" />
+
+        <circle cx="160" cy="148" r="38" fill="url(#dialBg)" stroke="url(#dialBorder)" strokeWidth="2" />
+        <circle cx="160" cy="148" r="26" fill="url(#innerDial)" stroke="#8b5cf6" strokeOpacity="0.4" strokeWidth="1" />
+
+        <rect x="150" y="150" width="20" height="16" rx="3" fill="url(#lockBody)" />
+        <path d="M154 150v-5a6 6 0 0 1 12 0v5" stroke="url(#lockShackle)" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="160" cy="158" r="2.5" fill="white" fillOpacity="0.9" />
+
+        {/* Dial tick marks — pre-calculated at r1=32, r2=37, cx=160, cy=148 */}
+        <line x1="192.00" y1="148.00" x2="197.00" y2="148.00" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="187.71" y1="164.00" x2="192.04" y2="166.50" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="176.00" y1="175.71" x2="178.50" y2="180.04" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="160.00" y1="180.00" x2="160.00" y2="185.00" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="144.00" y1="175.71" x2="141.50" y2="180.04" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="132.29" y1="164.00" x2="127.96" y2="166.50" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="128.00" y1="148.00" x2="123.00" y2="148.00" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="132.29" y1="132.00" x2="127.96" y2="129.50" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="144.00" y1="120.29" x2="141.50" y2="115.96" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="160.00" y1="116.00" x2="160.00" y2="111.00" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="176.00" y1="120.29" x2="178.50" y2="115.96" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+        <line x1="187.71" y1="132.00" x2="192.04" y2="129.50" stroke="white" strokeOpacity="0.3" strokeWidth="1.5" />
+
+        <circle cx="104" cy="108" r="5" fill="url(#boltGrad)" stroke="#8b5cf6" strokeOpacity="0.5" strokeWidth="1" />
+        <circle cx="104" cy="148" r="5" fill="url(#boltGrad)" stroke="#8b5cf6" strokeOpacity="0.5" strokeWidth="1" />
+        <circle cx="104" cy="188" r="5" fill="url(#boltGrad)" stroke="#8b5cf6" strokeOpacity="0.5" strokeWidth="1" />
+
+        <circle cx="100" cy="88"  r="3.5" fill="none" stroke="white" strokeOpacity="0.2" strokeWidth="1" />
+        <circle cx="220" cy="88"  r="3.5" fill="none" stroke="white" strokeOpacity="0.2" strokeWidth="1" />
+        <circle cx="100" cy="208" r="3.5" fill="none" stroke="white" strokeOpacity="0.2" strokeWidth="1" />
+        <circle cx="220" cy="208" r="3.5" fill="none" stroke="white" strokeOpacity="0.2" strokeWidth="1" />
+
+        <circle cx="58"  cy="100" r="16" fill="url(#coinGold)"   stroke="#fbbf24" strokeOpacity="0.4" strokeWidth="1" />
+        <text x="58"  y="105" textAnchor="middle" fontSize="13" fontWeight="bold" fill="white" fillOpacity="0.85">$</text>
+
+        <circle cx="262" cy="112" r="13" fill="url(#coinPurple)" stroke="#8b5cf6" strokeOpacity="0.5" strokeWidth="1" />
+        <text x="262" y="117" textAnchor="middle" fontSize="11" fontWeight="bold" fill="white" fillOpacity="0.85">₿</text>
+
+        <circle cx="245" cy="195" r="11" fill="url(#coinGold)"   stroke="#fbbf24" strokeOpacity="0.3" strokeWidth="1" />
+        <text x="245" y="199" textAnchor="middle" fontSize="9"  fontWeight="bold" fill="white" fillOpacity="0.85">$</text>
+
+        <g opacity="0.7">
+            <rect x="62" y="188" width="6" height="18" rx="2" fill="#8b5cf6" fillOpacity="0.7" />
+            <rect x="72" y="180" width="6" height="26" rx="2" fill="#a78bfa" fillOpacity="0.8" />
+            <rect x="82" y="184" width="6" height="22" rx="2" fill="#c4b5fd" fillOpacity="0.6" />
+        </g>
+
+        <defs>
+            <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#a855f7" />
+                <stop offset="100%" stopColor="#ec4899" />
+            </linearGradient>
+            <linearGradient id="ringGrad2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#7c3aed" />
+                <stop offset="100%" stopColor="#2563eb" />
+            </linearGradient>
+            <linearGradient id="vaultBody" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#1e1b4b" />
+                <stop offset="100%" stopColor="#0f0f1a" />
+            </linearGradient>
+            <linearGradient id="vaultBorder" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#ec4899" stopOpacity="0.3" />
+            </linearGradient>
+            <linearGradient id="dialBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#2e1065" />
+                <stop offset="100%" stopColor="#1e1040" />
+            </linearGradient>
+            <linearGradient id="dialBorder" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#a78bfa" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
+            </linearGradient>
+            <linearGradient id="innerDial" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#3b0764" />
+                <stop offset="100%" stopColor="#1a103a" />
+            </linearGradient>
+            <linearGradient id="lockBody" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#a78bfa" stopOpacity="0.9" />
+                <stop offset="100%" stopColor="#6d28d9" stopOpacity="0.9" />
+            </linearGradient>
+            <linearGradient id="lockShackle" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#ddd6fe" />
+                <stop offset="100%" stopColor="#8b5cf6" />
+            </linearGradient>
+            <linearGradient id="boltGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#4c1d95" />
+                <stop offset="100%" stopColor="#1e1b4b" />
+            </linearGradient>
+            <linearGradient id="coinGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#fbbf24" />
+                <stop offset="100%" stopColor="#d97706" />
+            </linearGradient>
+            <linearGradient id="coinPurple" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#7c3aed" />
+                <stop offset="100%" stopColor="#4c1d95" />
+            </linearGradient>
+        </defs>
+    </svg>
+);
+
 export const TwitterIcon = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
