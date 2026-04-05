@@ -1,0 +1,180 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  name         String
+  passwordHash String   @map("password_hash")
+  role         Role     @default(USER)
+  status       Status   @default(PENDING)
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  refreshTokens         RefreshToken[]
+  transactions          Transaction[]
+  periods               Period[]
+  expenseTemplates      ExpenseTemplate[]
+  goals                 Goal[]
+  sharedGoalsCreated    SharedGoal[]           @relation("CreatedBy")
+  sharedGoalMemberships SharedGoalMember[]
+  sharedGoalContribs    SharedGoalContribution[]
+
+  @@map("users")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum Status {
+  PENDING
+  APPROVED
+  REJECTED
+  BLOCKED
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  token     String   @unique
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("refresh_tokens")
+}
+
+model Transaction {
+  id        String          @id @default(uuid())
+  userId    String          @map("user_id")
+  amount    Decimal         @db.Decimal(12, 2)
+  type      TransactionType
+  category  String
+  comment   String?
+  date      DateTime
+  createdAt DateTime        @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("transactions")
+}
+
+enum TransactionType {
+  INCOME
+  EXPENSE
+}
+
+model Period {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  startDate DateTime @map("start_date") @db.Date
+  endDate   DateTime @map("end_date") @db.Date
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user     User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expenses PeriodExpense[]
+
+  @@map("periods")
+}
+
+model ExpenseTemplate {
+  id          String    @id @default(uuid())
+  userId      String    @map("user_id")
+  name        String
+  amount      Decimal   @db.Decimal(12, 2)
+  frequency   Frequency
+  paymentLink String?   @map("payment_link")
+  notes       String?
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  periodExpenses  PeriodExpense[]
+
+  @@map("expense_templates")
+}
+
+enum Frequency {
+  MONTHLY
+  BIMONTHLY
+  QUARTERLY
+}
+
+model PeriodExpense {
+  id          String   @id @default(uuid())
+  periodId    String   @map("period_id")
+  templateId  String?  @map("template_id")
+  name        String
+  amount      Decimal  @db.Decimal(12, 2)
+  isPaid      Boolean  @default(false) @map("is_paid")
+  paymentLink String?  @map("payment_link")
+  dueDate     DateTime? @map("due_date") @db.Date
+
+  period   Period           @relation(fields: [periodId], references: [id], onDelete: Cascade)
+  template ExpenseTemplate? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+
+  @@map("period_expenses")
+}
+
+model Goal {
+  id              String   @id @default(uuid())
+  userId          String   @map("user_id")
+  name            String
+  targetAmount    Decimal  @map("target_amount") @db.Decimal(12, 2)
+  savedAmount     Decimal  @default(0) @map("saved_amount") @db.Decimal(12, 2)
+  deadline        DateTime @db.Date
+  monthlyRequired Decimal  @map("monthly_required") @db.Decimal(12, 2)
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("goals")
+}
+
+model SharedGoal {
+  id           String   @id @default(uuid())
+  createdById  String   @map("created_by")
+  name         String
+  targetAmount Decimal  @map("target_amount") @db.Decimal(12, 2)
+  deadline     DateTime @db.Date
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  createdBy     User                     @relation("CreatedBy", fields: [createdById], references: [id])
+  members       SharedGoalMember[]
+  contributions SharedGoalContribution[]
+
+  @@map("shared_goals")
+}
+
+model SharedGoalMember {
+  id            String  @id @default(uuid())
+  goalId        String  @map("goal_id")
+  userId        String  @map("user_id")
+  monthlyPledge Decimal @map("monthly_pledge") @db.Decimal(12, 2)
+
+  goal SharedGoal @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  user User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([goalId, userId])
+  @@map("shared_goal_members")
+}
+
+model SharedGoalContribution {
+  id        String   @id @default(uuid())
+  goalId    String   @map("goal_id")
+  userId    String   @map("user_id")
+  amount    Decimal  @db.Decimal(12, 2)
+  date      DateTime @db.Date
+  createdAt DateTime @default(now()) @map("created_at")
+
+  goal SharedGoal @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  user User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("shared_goal_contributions")
+}

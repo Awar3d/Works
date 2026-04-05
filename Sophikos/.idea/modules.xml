@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Sophikos.iml" filepath="$PROJECT_DIR$/.idea/Sophikos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Frontend/.idea/Sophikos.iml" filepath="$PROJECT_DIR$/Frontend/.idea/Sophikos.iml" />
     </modules>
   </component>
 </project>
