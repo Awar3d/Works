@@ -1,47 +1,41 @@
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
-import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import { login } from '@/src/features/auth/api/auth';
+import { View, Text, ImageBackground, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Typography } from "@/src/shared/ui/Typography";
+import { PasswordStrength } from "@/src/shared/ui/PasswordStrength";
+import { Input } from "@/src/shared/ui/Input";
+import { radius } from '@/src/shared/lib/theme';
+import { useState, useEffect } from "react";
 
 export default function LoginScreen() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const mutation = useMutation({
-        mutationFn: () => login(email, password),
-        onSuccess: async (data) => {
-            if(data.token) {
-                await SecureStore.setItemAsync('token', data.token);
-                router.replace('/(tabs');
-            }
-        }
-    })
-
     return (
-        <View style={{backgroundColor: "white"}}>
-            <View>
-                <TextInput
-                    placeholder="Введите Email"
-                    value={email}
-                    onChangeText={setEmail}
-                />
-            </View>
-            <View>
-                <TextInput
-                    placeholder="Введите пароль"
-                    value={password}
-                    onChangeText={setPassword}
-                    secureTextEntry
-                />
-            </View>
-            <TouchableOpacity
-                onPress={() => mutation.mutate()}
-                disabled={mutation.isPending}
-            >
-                <Text>
-                    {'Войти'}
-                </Text>
-            </TouchableOpacity>
-        </View>
+        <ImageBackground style={styles.container} source={require('@/src/shared/assets/images/log_bg.png')}>
+            <SafeAreaView style={{ flex: 1}}>
+                <View style={styles.top}>
+                    <Typography variant='h2'>С возвращением</Typography>
+                    <Typography variant='subtitle'>Рады видеть тебя снова</Typography>
+                </View>
+                <View style={styles.bottom}>
+                    <Input label={"Email"} placeholder="example@email.com"/>
+                    <Input label={"Пароль"} placeholder="Минимум 8 символов"/>
+                </View>
+            </SafeAreaView>
+        </ImageBackground>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    top: {
+        padding: 24,
+    },
+    bottom: {
+        backgroundColor: '#fff',
+        borderTopLeftRadius: radius.xl,
+        borderTopRightRadius: radius.xl,
+        padding: 24,
+        gap: 14,
+        marginBottom: 16,
+    }
+})
