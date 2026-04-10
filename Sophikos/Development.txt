@@ -1,0 +1,25 @@
+10.04.26:
+Вот краткое резюме изменений с последнего коммита:
+
+  Аутентификация и роутинг
+  - Добавлен AuthProviders.tsx — провайдер контекста авторизации
+  - Новый защищённый роут app/(app)/ с _layout.tsx и home.tsx — экран после входа
+  - Обновлён app/_layout.tsx — теперь использует AuthProviders
+  - Обновлён index.tsx — логика редиректа в зависимости от состояния авторизации
+
+  Безопасное хранение
+  - Добавлен secureStorage/storage.ts — для хранения токенов (вероятно через expo-secure-store)
+
+  UI компоненты
+  - Новый ButtonArrow.tsx — кнопка со стрелкой
+  - Добавлен types.ts для общих типов UI
+  - Обновлён Button.tsx
+  - SVG ассеты: ArrowRight.tsx, GoogleSign.tsx, G.svg
+
+  Страницы Login / Register
+  - Значительно переработаны login.tsx и register.tsx
+
+  Инфраструктура
+  - Добавлен metro.config.js
+  - Обновлён package.json (новые зависимости)
+  - Изменён app.json

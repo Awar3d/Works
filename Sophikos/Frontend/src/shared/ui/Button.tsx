@@ -1,15 +1,8 @@
 import { Text, Pressable, StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { colors, radius } from '@/src/shared/lib/theme';
+import { ButtonProps } from './types';
 
-interface Props {
-    variant?: 'primary' | 'secondary';
-    style?: ViewStyle;
-    children: React.ReactNode;
-    contentStyle?: TextStyle;
-    onPress?: () => void;
-}
-
-export function Button({ variant = 'primary', style, children, contentStyle, onPress }: Props) {
+export function Button({ variant = 'primary', style, children, contentStyle, onPress }: ButtonProps) {
     return (
         <Pressable style={[styles[variant], style]} onPress={onPress}>
             <Text style={[styles.text, styles[`${variant}Text`], contentStyle]}>
