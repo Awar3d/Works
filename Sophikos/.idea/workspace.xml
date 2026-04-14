@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="533434ce-c8f7-49df-8e4c-2e5a2744d8b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/(tabs)/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app/(app)/_layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app/(app)/home.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(auth)/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(auth)/register.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/features/auth/api/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/auth/api/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/shared/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/shared/ui/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/features/auth/secureStorage/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/auth/secureStorage/storage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="false" />
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -60,13 +54,19 @@
     &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alimd/WebstormProjects/Works/Sophikos/Frontend/app/(public)&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alimd/WebstormProjects/Works/Sophikos&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -88,11 +88,11 @@
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\src\features\auth\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\(auth)" />
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\" />
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\(public)" />
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\src\shared\assets\images" />
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend" />
-      <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -120,7 +120,12 @@
       <workItem from="1775642942017" duration="7000" />
       <workItem from="1775747168794" duration="5222000" />
       <workItem from="1775793516882" duration="228000" />
-      <workItem from="1775832329936" duration="303000" />
+      <workItem from="1775832329936" duration="3464000" />
+      <workItem from="1775887640544" duration="4803000" />
+      <workItem from="1776077499619" duration="135000" />
+      <workItem from="1776146771988" duration="1028000" />
+      <workItem from="1776155803355" duration="1577000" />
+      <workItem from="1776158826407" duration="2055000" />
     </task>
     <servers />
   </component>

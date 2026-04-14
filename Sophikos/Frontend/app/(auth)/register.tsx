@@ -7,11 +7,11 @@ import { Button } from "@/src/shared/ui/Button";
 import { ButtonArrow } from "@/src/shared/ui/ButtonArrow";
 import { radius, colors } from '@/src/shared/lib/theme';
 import { useState, useEffect } from "react";
-import { ArrowRight } from "../src/shared/assets/svg/ArrowRight";
+import { ArrowRight } from "../../src/shared/assets/svg/ArrowRight";
 import { register } from "@/src/features/auth/api/auth";
 import { router } from "expo-router";
 
-export default function LoginScreen() {
+export default function RegisterScreen() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

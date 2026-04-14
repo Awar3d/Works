@@ -1,17 +1,14 @@
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Typography } from "@/src/shared/ui/Typography";
-import { PasswordStrength } from "@/src/shared/ui/PasswordStrength";
 import { Input } from "@/src/shared/ui/Input";
 import { Button } from "@/src/shared/ui/Button";
 import { ButtonArrow } from "@/src/shared/ui/ButtonArrow";
 import { radius, colors } from '@/src/shared/lib/theme';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { GoogleSign } from "@/src/shared/assets/svg/GoogleSign";
 import { login } from "@/src/features/auth/api/auth";
-import {ArrowRight} from "../src/shared/assets/svg/ArrowRight";
-import { setItemAsync } from "expo-secure-store";
-import { router } from 'expo-router';
+import { router, Redirect } from 'expo-router';
 import { useAuth } from '@/app/providers/AuthProviders';
 
 export default function LoginScreen() {
@@ -20,7 +17,7 @@ export default function LoginScreen() {
     const { signIn, isAuthenticated } = useAuth();
 
     if (isAuthenticated) {
-        return <Redirect href="/(app)" />;
+        return <Redirect href="(home)/" />;
     }
 
     const handleSubmit = async () => {
@@ -29,10 +26,9 @@ export default function LoginScreen() {
         if(res.status === 200){
             console.log("Успешно!")
 
-            const token = "da"
+            const token = res.data.token;
 
             await signIn(token);
-            router.replace('/(app)');
         }else{
             console.log("Ошибка!" + res.status);
         }

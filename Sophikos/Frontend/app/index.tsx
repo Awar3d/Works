@@ -18,7 +18,7 @@ export default function SplashScreen() {
     }
 
     if (isAuthenticated) {
-        return <Redirect href="/(app)" />;
+        return <Redirect href="/(home)" />;
     }
 
     return (
@@ -39,10 +39,10 @@ export default function SplashScreen() {
                         </Typography>
                     </View>
                     <View style={styles.buttonWrapper}>
-                        <Button variant={'primary'} onPress={() => { router.push('/register'); }}>
+                        <Button variant={'primary'} onPress={() => { router.push('(auth)/register'); }}>
                             Создать аккаунт
                         </Button>
-                        <Button variant={'secondary'} onPress={() => { router.push('/login'); }}>
+                        <Button variant={'secondary'} onPress={() => { router.push('(auth)/login'); }}>
                             Войти в аккаунт
                         </Button>
                         <Typography variant={'caption'} style={styles.agreement}>
