@@ -17,7 +17,7 @@ export default function LoginScreen() {
     const { signIn, isAuthenticated } = useAuth();
 
     if (isAuthenticated) {
-        return <Redirect href="(home)/" />;
+        return <Redirect href="(home)/"/>;
     }
 
     const handleSubmit = async () => {

@@ -1,19 +1,13 @@
-import { View, Text } from "react-native";
-import { Button } from "@/src/shared/ui/Button";
-import { useAuth } from "@/app/providers/AuthProviders";
+import { View, Text, StyleSheet } from "react-native";
 
-export default function HomeScreen() {
-    const { signOut } = useAuth();
-
-    const handlePress = async () => {
-        await signOut();
-        window.location.reload();
-    }
-
-    return(
+export default function HomeTab() {
+    return (
         <View>
             <Text>Home</Text>
-            <Button onPress={() => {handlePress()}}>Exit</Button>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
