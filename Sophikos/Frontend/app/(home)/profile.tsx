@@ -4,12 +4,19 @@ import { useAuth } from "@/app/providers/AuthProviders";
 import { router } from "expo-router";
 
 export default function ProfileTab() {
-    const { signOut } = useAuth();
+    const { signOut, token } = useAuth();
 
     const handlePress = async () => {
         await signOut();
         router.replace('/(auth)/login');
     }
+
+    const getUserInfo = async () => {
+        const res = await getUser(token);
+        console.log("res", res);
+    }
+
+    getUserInfo();
 
     return(
         <View>

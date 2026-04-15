@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="533434ce-c8f7-49df-8e4c-2e5a2744d8b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app/(auth)/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(auth)/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app/(home)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(home)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app/(home)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(home)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/app/(home)/profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(home)/profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/features/auth/api/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/auth/api/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/shared/lib/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/shared/lib/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/shared/ui/Typography.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/shared/ui/Typography.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/shared/ui/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/shared/ui/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +129,8 @@
       <workItem from="1776146771988" duration="1028000" />
       <workItem from="1776155803355" duration="1577000" />
       <workItem from="1776158826407" duration="2055000" />
+      <workItem from="1776249441657" duration="7960000" />
+      <workItem from="1776268035310" duration="4326000" />
     </task>
     <servers />
   </component>

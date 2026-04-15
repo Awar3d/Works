@@ -25,6 +25,7 @@ export default function LoginScreen() {
 
         if(res.status === 200){
             console.log("Успешно!")
+            console.log("data", res)
 
             const token = res.data.token;
 

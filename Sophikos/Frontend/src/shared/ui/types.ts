@@ -5,3 +5,9 @@ export interface ButtonProps {
     contentStyle?: TextStyle;
     onPress?: () => void;
 }
+
+export interface CardProps {
+    total: number;
+    available: number;
+    unavailable: number;
+}

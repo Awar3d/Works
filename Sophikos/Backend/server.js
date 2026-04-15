@@ -9,7 +9,7 @@ fastify.register(require('@fastify/cors'), {
 fastify.register(require('./routes/users'));
 fastify.register(require('./routes/auth'));
 
-fastify.listen({ port: 8000, host: 'localhost' }, (err) => {
+fastify.listen({ port: 10000, host: '0.0.0.0' }, (err) => {
     if (err) {
         fastify.log.error(err);
         process.exit(1);

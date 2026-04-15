@@ -20,7 +20,7 @@ export function Typography({ variant = 'body', color, children, style }: Props) 
 
 const styles = StyleSheet.create({
     h1: {
-        fontSize: 32,
+        fontSize: 36,
         fontWeight: 'bold',
     },
     h2: {
