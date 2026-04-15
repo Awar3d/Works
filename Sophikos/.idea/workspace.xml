@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="533434ce-c8f7-49df-8e4c-2e5a2744d8b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/(app)/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/(app)/home.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(auth)/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/app/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app/(auth)/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/features/auth/api/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/auth/api/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/features/auth/secureStorage/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/features/auth/secureStorage/storage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,11 +81,11 @@
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\src\features\auth\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\(home)\" />
+      <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\(home)\(tabs)" />
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\(auth)" />
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\" />
       <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\app\(public)" />
-      <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend\src\shared\assets\images" />
-      <recent name="C:\Users\alimd\WebstormProjects\Works\Sophikos\Frontend" />
     </key>
   </component>
   <component name="SharedIndexes">
